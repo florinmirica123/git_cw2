@@ -3,15 +3,14 @@ clc
 
 %% TASK 1 - READ TEMPERATURE DATA, PLOT, AND WRITE TO A LOG FILE [20 MARKS]
 a=arduino('COM5','Uno');
-
-duration = 120; %aquisition time in seconds
-TC = 0.01; %temperature coefficient from sensor documentation
-V0 = 0.5; %zero-degree voltage
-
 analogPin = 'A0'; %specifying the analog used on the arduino 
 
 
-time = linspace(0,120,120); %arrays that will contain the data
+duration = 600; %aquisition time in seconds
+TC = 0.01; %temperature coefficient from sensor documentation
+V0 = 0.5; %zero-degree voltage
+
+time = 1:600; %arrays that will contain the data
 voltageValues = zeros(1, duration);
 temperatureData = zeros(1,duration);
 
@@ -42,13 +41,62 @@ grid on;
 
 %% Output to screen formatting example
 date = input('What is the date today?', 's');
-d = sprintf('Data logging initiated - %s', date);
-location = input('What location are you taking the temperature recordings from? ', 's');
-l = sprintf('Location - %s', location);
+location = input('\nWhat location are you taking the temperature recordings from? ', 's');
 
-for t = 1:59
-    fsprintf('Minute \t0 \nTemperature %2f C', temperatureData);
+d = fprintf('\nData logging initiated - %s', date);
+l = fprintf('Location - %s', location);
+
+for i = 1:1
+    fprintf('\n\nMinute \t0 \nTemperature %2f C', temperatureData(1));
 end
+
+for i = 60:60
+    fprintf('\n\nMinute \t1 \nTemperature %2f C', temperatureData(60));
+end
+
+for i = 120:120
+    fprintf('\n\nMinute \t2 \nTemperature %2f C', temperatureData(120));
+end
+
+for i = 180:180
+    fprintf('\n\nMinute \t3 \nTemperature %2f C', temperatureData(180));
+end
+
+for i = 240:240
+    fprintf('\n\nMinute \t4 \nTemperature %2f C', temperatureData(240));
+end
+
+for i = 300:300
+    fprintf('\n\nMinute \t5 \nTemperature %2f C', temperatureData(300));
+end
+
+for i = 360:360
+    fprintf('\n\nMinute \t6 \nTemperature %2f C', temperatureData(360));
+end
+
+for i = 420:420
+    fprintf('\n\nMinute \t7 \nTemperature %2f C', temperatureData(420));
+end
+
+for i = 480:480
+    fprintf('\n\nMinute \t8 \nTemperature %2f C', temperatureData(480));
+end
+
+for i = 540:540
+    fprintf('\n\nMinute \t9 \nTemperature %2f C', temperatureData(540));
+end
+
+for i = 600:600
+    fprintf('\n\nMinute \t10 \nTemperature %2f C', temperatureData(600));
+end
+
+ma = fprintf('\nMax temp \t %2f C', maxValue);
+mi = fprintf('\nMin temp \t %2f C', minValue);
+avg = fprintf('\nAverage temp \t %2f C', averageValue);
+
+o = fprintf('\n\nData logging terminated');
+
+
     
 
 
