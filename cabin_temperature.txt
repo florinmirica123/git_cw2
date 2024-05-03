@@ -1,0 +1,41 @@
+What location are you taking the temperature recordings from? Nuneaton
+
+Data logging initiated - 22/04/2024Location - Nuneaton
+
+Minute 	0 
+Temperature 20.869990 C
+
+Minute 	1 
+Temperature 21.847507 C
+
+Minute 	2 
+Temperature 21.847507 C
+
+Minute 	3 
+Temperature 21.847507 C
+
+Minute 	4 
+Temperature 21.847507 C
+
+Minute 	5 
+Temperature 21.847507 C
+
+Minute 	6 
+Temperature 21.847507 C
+
+Minute 	7 
+Temperature 21.847507 C
+
+Minute 	8 
+Temperature 21.847507 C
+
+Minute 	9 
+Temperature 21.847507 C
+
+Minute 	10 
+Temperature 21.847507 C
+Max temp 	 23.313783 C
+Min temp 	 20.381232 C
+Average temp 	 21.617791 C
+
+Data logging terminated
